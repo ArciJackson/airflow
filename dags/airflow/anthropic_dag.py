@@ -8,7 +8,7 @@ from pathlib import Path
 
 # Define el cliente de la API
 client = anthropic.Anthropic(
-    api_key="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",
+    api_key="szwQq0wdagYsCgDJw-xBdA8AAA",
 )
 
 # Carpeta raíz donde están los adjuntos

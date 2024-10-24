@@ -6,7 +6,7 @@ from datetime import datetime
 # Función para conectarse a la base de datos y ejecutar una consulta
 def ejecutar_consulta():
     # Crear una conexión utilizando el Hook de MySQL
-    mysql_hook = MySqlHook(mysql_conn_id='helpdesk')  # ID de conexión en Airflow o variable de entorno
+    mysql_hook = MySqlHook(mysql_conn_id='helpdesk')  # ID de conexión en Airflow
     conn = mysql_hook.get_conn()  # Obtener la conexión
     cursor = conn.cursor()  # Crear un cursor para ejecutar la consulta
 

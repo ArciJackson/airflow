@@ -1,0 +1,25 @@
+[2024-10-24T07:52:51.486+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-24T07:52:51.510+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consulta_mariadb.ejecutar_consulta_db manual__2024-10-24T07:52:51.068814+00:00 [queued]>
+[2024-10-24T07:52:51.517+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consulta_mariadb.ejecutar_consulta_db manual__2024-10-24T07:52:51.068814+00:00 [queued]>
+[2024-10-24T07:52:51.517+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-24T07:52:51.533+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): ejecutar_consulta_db> on 2024-10-24 07:52:51.068814+00:00
+[2024-10-24T07:52:51.537+0000] {standard_task_runner.py:72} INFO - Started process 51591 to run task
+[2024-10-24T07:52:51.541+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'consulta_mariadb', 'ejecutar_consulta_db', 'manual__2024-10-24T07:52:51.068814+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/tq_dag.py', '--cfg-path', '/tmp/tmp_vwaecch']
+[2024-10-24T07:52:51.541+0000] {standard_task_runner.py:105} INFO - Job 25: Subtask ejecutar_consulta_db
+[2024-10-24T07:52:51.612+0000] {task_command.py:467} INFO - Running <TaskInstance: consulta_mariadb.ejecutar_consulta_db manual__2024-10-24T07:52:51.068814+00:00 [running]> on host ip-172-31-93-26.ec2.internal
+[2024-10-24T07:52:51.716+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='consulta_mariadb' AIRFLOW_CTX_TASK_ID='ejecutar_consulta_db' AIRFLOW_CTX_EXECUTION_DATE='2024-10-24T07:52:51.068814+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-24T07:52:51.068814+00:00'
+[2024-10-24T07:52:51.717+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-24T07:52:51.746+0000] {base.py:84} INFO - Retrieving connection 'helpdesk'
+[2024-10-24T07:52:51.746+0000] {sql.py:216} WARNING - This setter is for backward compatibility and should not be used.
+Since the introduction of connection property, the providers listed below breaks due to assigning value to self.connection in their __init__ method.
+* apache-airflow-providers-mysql<5.7.1
+* apache-airflow-providers-elasticsearch<5.5.1
+* apache-airflow-providers-postgres<5.13.0
+[2024-10-24T07:52:51.759+0000] {logging_mixin.py:190} INFO - ('glpi',)
+[2024-10-24T07:52:51.759+0000] {logging_mixin.py:190} INFO - ('information_schema',)
+[2024-10-24T07:52:51.759+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-24T07:52:51.778+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-24T07:52:51.778+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consulta_mariadb, task_id=ejecutar_consulta_db, run_id=manual__2024-10-24T07:52:51.068814+00:00, execution_date=20241024T075251, start_date=20241024T075251, end_date=20241024T075251
+[2024-10-24T07:52:51.797+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-24T07:52:51.822+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-24T07:52:51.824+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

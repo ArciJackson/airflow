@@ -1,0 +1,47 @@
+[2024-10-24T00:00:01.060+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-24T00:00:01.084+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: procesar_ocr_anthropic.procesar_ocr scheduled__2024-10-23T00:00:00+00:00 [queued]>
+[2024-10-24T00:00:01.094+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: procesar_ocr_anthropic.procesar_ocr scheduled__2024-10-23T00:00:00+00:00 [queued]>
+[2024-10-24T00:00:01.094+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-10-24T00:00:01.107+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): procesar_ocr> on 2024-10-23 00:00:00+00:00
+[2024-10-24T00:00:01.112+0000] {standard_task_runner.py:72} INFO - Started process 38453 to run task
+[2024-10-24T00:00:01.115+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'procesar_ocr_anthropic', 'procesar_ocr', 'scheduled__2024-10-23T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/anthropic_dag.py', '--cfg-path', '/tmp/tmpq98kzbsu']
+[2024-10-24T00:00:01.116+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask procesar_ocr
+[2024-10-24T00:00:01.197+0000] {task_command.py:467} INFO - Running <TaskInstance: procesar_ocr_anthropic.procesar_ocr scheduled__2024-10-23T00:00:00+00:00 [running]> on host ip-172-31-93-26.ec2.internal
+[2024-10-24T00:00:01.305+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='procesar_ocr_anthropic' AIRFLOW_CTX_TASK_ID='procesar_ocr' AIRFLOW_CTX_EXECUTION_DATE='2024-10-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-23T00:00:00+00:00'
+[2024-10-24T00:00:01.305+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-24T00:00:01.318+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/ad083001167002724418620240601095511930/ocr.txt
+[2024-10-24T00:00:02.240+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:02.248+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/ad083001167002724418620240601095511930/ad083001167002724418620240601095511930_resultados.json
+[2024-10-24T00:00:02.249+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/ad083001167002724793220240612163356558/ocr.txt
+[2024-10-24T00:00:03.272+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:03.274+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/ad083001167002724793220240612163356558/ad083001167002724793220240612163356558_resultados.json
+[2024-10-24T00:00:03.274+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/z0901635425008241689e0/ocr.txt
+[2024-10-24T00:00:04.070+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:04.071+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/z0901635425008241689e0/z0901635425008241689e0_resultados.json
+[2024-10-24T00:00:04.071+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/D106854/ocr.txt
+[2024-10-24T00:00:04.818+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:04.819+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/D106854/D106854_resultados.json
+[2024-10-24T00:00:04.820+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/z0800153993015245833111864/ocr.txt
+[2024-10-24T00:00:06.117+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:06.118+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/z0800153993015245833111864/z0800153993015245833111864_resultados.json
+[2024-10-24T00:00:06.119+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/Cliente_2024-02-22_214817122/ocr.txt
+[2024-10-24T00:00:06.967+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:06.968+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/Cliente_2024-02-22_214817122/Cliente_2024-02-22_214817122_resultados.json
+[2024-10-24T00:00:06.969+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/ad083001167002724959620240602122621973/ocr.txt
+[2024-10-24T00:00:07.871+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:07.872+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/ad083001167002724959620240602122621973/ad083001167002724959620240602122621973_resultados.json
+[2024-10-24T00:00:07.872+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/z09016354250082400157fe2/ocr.txt
+[2024-10-24T00:00:08.630+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:08.631+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/z09016354250082400157fe2/z09016354250082400157fe2_resultados.json
+[2024-10-24T00:00:08.632+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/ad083001167002724687520241015120000892/ocr.txt
+[2024-10-24T00:00:09.527+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:09.529+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/ad083001167002724687520241015120000892/ad083001167002724687520241015120000892_resultados.json
+[2024-10-24T00:00:09.529+0000] {logging_mixin.py:190} INFO - Procesando archivo: /home/ubuntu/adjuntos/z09016354250082400186c9e/ocr.txt
+[2024-10-24T00:00:10.421+0000] {_client.py:1026} INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2024-10-24T00:00:10.423+0000] {logging_mixin.py:190} INFO - Respuesta guardada en: /home/ubuntu/adjuntos/z09016354250082400186c9e/z09016354250082400186c9e_resultados.json
+[2024-10-24T00:00:10.423+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-24T00:00:10.440+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-24T00:00:10.441+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=procesar_ocr_anthropic, task_id=procesar_ocr, run_id=scheduled__2024-10-23T00:00:00+00:00, execution_date=20241023T000000, start_date=20241024T000001, end_date=20241024T000010
+[2024-10-24T00:00:10.479+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-24T00:00:10.508+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-24T00:00:10.510+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
